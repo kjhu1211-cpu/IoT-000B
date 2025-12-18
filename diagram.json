@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 208.2, "left": -573.2, "attrs": {} },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 96,
+      "left": -129.56,
+      "attrs": { "fastTLS": "1" }
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "lcd1",
+      "top": 33.7,
+      "left": 116.4,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": 387.6,
+      "left": -118,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 110.7,
+      "left": -453.9,
+      "rotate": 270,
+      "attrs": { "volume": "0.1" }
+    }
+    
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "lcd1:RST", "esp:4", "purple", [] ],
+    [ "lcd1:D/C", "esp:2", "#8f4814", [] ],
+    [ "lcd1:SCK", "esp:18", "gray", [] ],
+    [ "lcd1:MISO", "esp:19", "orange", [] ],
+    [ "lcd1:MOSI", "esp:23", "green", [] ],
+    [ "lcd1:CS", "esp:15", "violet", [] ],
+    [ "lcd1:LED", "bb1:tp.19", "red", [] ],
+    [ "lcd1:GND", "bb1:tn.23", "black", [] ],
+    [ "esp:5V", "bb1:tp.25", "red", [] ],
+    [ "esp:GND.2", "bb1:tn.25", "black", [] ],
+    [ "keypad1:R1", "esp:27", "#8f4814", [] ],
+    [ "keypad1:R2", "esp:26", "#8f4814", [] ],
+    [ "keypad1:R3", "esp:25", "#8f4814", [] ],
+    [ "keypad1:R4", "esp:33", "#8f4814", [] ],
+    [ "keypad1:C1", "esp:32", "orange", [] ],
+    [ "keypad1:C2", "esp:17", "orange", [] ],
+    [ "keypad1:C3", "esp:16", "orange", [] ],
+    [ "keypad1:C4", "esp:22", "orange", [] ],
+    [ "bz1:2", "esp:14", "cyan", [] ],
+    [ "bz1:1", "bb1:tn.17", "black", [] ]
+  ],
+  "dependencies": {}
+}
