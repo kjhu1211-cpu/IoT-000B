@@ -154,7 +154,7 @@
 
                     <!-- Github link -->
                     <span class="link-block">
-                        <a href="https://github.com/kjhu1211-cpu/IoT-000B.git" target="_blank"
+                        <a href="https://github.com/kjhu1211-cpu/IoT-000B/tree/main" target="_blank"
                            class="external-link button is-normal is-rounded is-dark">
                             <span class="icon">
                                 <i class="fab fa-github" style="color: black;"></i>
@@ -189,7 +189,7 @@
           <div style="border: none; border-radius: 15px; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); overflow: hidden; background: linear-gradient(45deg, #0575e6, #7928ca81); padding: 10px;">
             <video poster="" id="tree" autoplay controls muted loop height="100%" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
               <!-- Your video here -->
-              <source src="static\videos\IoT_Assignment_3_video(1).mp4" type="video/mp4">
+              <source src="static\videos\final_demo.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -210,13 +210,13 @@
            Overview
          </h2>
         <div class="content has-text-justified">
-            Overview of Joker.
-            <strong>(Project Overview)</strong>: Improve the joke machine by adding various sensors and tools to the joke machine.
-            <span style="color: #ff69b4;">(김태연):</span> Joke Rating and Last update time indication. 
-            <span style="color: #007bff;">(강정후)</span>, Laughing Motion and New Joke Request.
-            <span style="color: #0eb939;">(김주현)</span>, Joke Category Selection and Korean Translation.
+            Overview of My Task.
+            <p>
+                This part focuses on implementing rating-based laughing feedback using physical outputs.
+                User ratings are mapped to different buzzer sound patterns to provide immediate emotional responses.
+                Although servo-based motion was initially designed, the final system prioritizes stability and reliability by using buzzer-only feedback.
           </p>
-          <img src="static\images\IoT_Assignment_3_Image(1).png" alt="Teaser GIF" height="100%">
+          <img src="static\images\diagram_with_servo.png" alt="Teaser GIF" height="100%">
           <p class="subtitle has-text-centered">
         </div>
       </div>
@@ -236,19 +236,68 @@
       <div class="column is-full">
         <div class="content">
          <h2 class="title is-3" style="background: linear-gradient(45deg, #f200b571, #eb419f8e, #0077ff5b, #2881cad7); color: white; padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); text-align: center;">
-           Method
+           Implement
          </h2>
           <div class="content has-text-justified" style="font-size: 4.5 rem;"></div>
-          <strong>Overview of Joker.</strong>
-          <strong>Joke Rating</strong> 
-          <strong>Laughing Motion</strong> 
-           <strong>Joke Category Selection</strong> 
           </div>
+          <div class="content has-text-justified">
+            Buzzer
+          </div>
+          <p>
+            The buzzer generates different sound patterns based on user ratings (1–5).
+            Each rating triggers a distinct frequency and rhythm to express varying levels of laughter.
+            This audio feedback provides an immediate and intuitive emotional response without additional hardware overhead.
+          </p>
           </p>
           </p>
           <div style="text-align: center;">
-          <img src="static\images\IoT_Assignment_3_Image(2).png" alt="MY ALT TEXT" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+          <img src="static\images\Buzzer.png" alt="MY ALT TEXT" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
           </div>
+          <div style="text-align: center;">
+          <img src="static\images\Buzzer_code.png" alt="MY ALT TEXT" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+          </div>
+          <div class="content has-text-justified">
+            Servo
+          </div>
+          <p>
+            Servo motors were initially implemented to create motion-based laughing feedback.
+            The movement range and repetition were mapped to user ratings to express different laughter intensities.
+          </p>
+          </p>
+          </p>
+          <div style="text-align: center;">
+          <img src="static\images\servo_motion.GIF" alt="MY ALT TEXT" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+          </div>
+          <div style="text-align: center;">
+          <img src="static\images\servo_code.png" alt="MY ALT TEXT" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+          </div>
+      
+      </p>
+      <div style="text-align: center;">
+      </p>
+      </div>   
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+         <h2 class="title is-3" style="background: linear-gradient(45deg, #f200b571, #eb419f8e, #0077ff5b, #2881cad7); color: white; padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); text-align: center;">
+           Conclusion & Summary
+         </h2>
+          <div class="content has-text-justified" style="font-size: 4.5 rem;"></div>
+          </div>
+          <p>
+            This project demonstrated how IoT systems can deliver interactive and emotional user experiences beyond traditional screen-based output.
+            By combining physical input, cloud-based processing, and audio feedback, Joker successfully transformed humor into a tangible interaction.
+            Through design trade-offs and stability-focused decisions, the final system emphasizes reliability, usability, and real-world IoT constraints.
+          </p>
+          </p>
+          </p>
       
       </p>
       <div style="text-align: center;">
@@ -299,3 +348,4 @@
 
   </body>
   </html>
+
